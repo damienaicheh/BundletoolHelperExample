@@ -46,9 +46,10 @@ steps:
     pathToPublish: 'drop'
     artifactName: 'release'
 
-- task: Bundletool@1
+- task: InstallBundletool@1
   inputs:
-    bundletoolArguments: 'version'
+    username: 'damienaicheh'
+    personalAccessToken: '$(githubPersonnalAccessToken)'
 
 - task: AabConvertToUniversalApk@1
   inputs:
